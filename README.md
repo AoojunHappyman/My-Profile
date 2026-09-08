@@ -11,7 +11,7 @@ Dependency-free static website. Serve this directory with any static web server 
 - portrait.jpg: optimized derivative of the preserved original DSCF1476.JPG
 
 ## Content still needed
-GitHub profile: https://github.com/AoojunHappyman (provided by the owner). Expense Tracker demo: https://expense-tracker-5axh.onrender.com/login. The LinkedIn URL and Expense Tracker repository URL are still needed. Visible pending labels deliberately replace generic homepages and localhost links. No graduation date, responsibilities, statistics, or additional experience were invented.
+GitHub profile: https://github.com/AoojunHappyman (provided by the owner). Expense Tracker demo: https://expense-tracker-sg.onrender.com/. The LinkedIn URL and Expense Tracker repository URL are still needed. Visible pending labels deliberately replace generic homepages and localhost links. No graduation date, responsibilities, statistics, or additional experience were invented.
 
 The contact form validates inputs and opens a mailto draft. It does not send messages or store submissions. A configured email client is required; the direct email link remains available.
 
