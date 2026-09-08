@@ -1,0 +1,7 @@
+qa/
+DSCF1476.JPG
+.env
+.env.*
+!.env.example
+node_modules/
+*.log
