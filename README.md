@@ -8,7 +8,7 @@ Dependency-free static website. Serve this directory with any static web server 
 - config.js: mobile menu, theme preference, email draft validation, print controls
 - cv.html: editable print-friendly resume
 - Pattanachai-Sawetbunchoed-Resume.pdf: verified one-page downloadable resume; regenerate from cv.html after resume edits
-- profile.jpg: current profile photograph supplied by the owner, displayed in the hero
+- profile.jpg: current profile photograph supplied by the owner, displayed in About Me
 
 ## Content still needed
 GitHub profile: https://github.com/AoojunHappyman (provided by the owner). Expense Tracker demo: https://expense-tracker-sg.onrender.com/. The LinkedIn URL and Expense Tracker repository URL are still needed. Visible pending labels deliberately replace generic homepages and localhost links. No graduation date, responsibilities, statistics, or additional experience were invented.
