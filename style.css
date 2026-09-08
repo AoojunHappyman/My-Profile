@@ -3,10 +3,8 @@
 @media(max-width:600px){.wrap{width:calc(100% - 36px)}.hero{padding-top:26px}.hero-grid{padding:38px 0}.hero-grid h1{font-size:clamp(39px,10.5vw,60px)}.intro{font-size:13px}.hero-description{font-size:14px}.availability{font-size:10px}.hero-top{gap:15px}.code-body{font-size:11px}.hero-bottom{font-size:8px}.hero-bottom>a{display:none}.section{padding-top:62px}.section-heading{display:block}.section-heading>p{margin-top:20px}.desktop{display:none}.project{grid-template-columns:1fr}.project-visual{min-height:300px}.project-content{padding:25px 21px}.about-grid{grid-template-columns:1fr;gap:12px}.skills-grid{gap:0}.skill-group+.skill-group{padding-left:15px}.skill-group:nth-child(3){padding-left:0}.skill-group h3{font-size:15px}.tags li{font-size:10px;padding:4px 8px}.timeline-row{grid-template-columns:1fr;gap:10px;padding:24px 0}.contact-section{margin-top:62px;padding:50px 0}.form-row{grid-template-columns:1fr;gap:0}.footer{flex-wrap:wrap}.footer p{font-size:10px}.footer>a:last-child{margin-left:auto}.actions{gap:8px}.button{padding:11px 14px;gap:17px}.about-facts{gap:30px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 .project-symbol{white-space:nowrap}@media(max-width:600px){.project-symbol{font-size:80px;padding:25px 10px}}
-/* Profile photograph in the introduction */
-.hero-portrait{margin:0;max-width:390px;width:100%;justify-self:end;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--surface)}
-.hero-portrait img{display:block;width:100%;height:410px;object-fit:cover;object-position:50% 48%}
-.hero-portrait figcaption{display:flex;flex-direction:column;gap:5px;padding:16px 20px;font:10px/1.5 Consolas,monospace;letter-spacing:1px;color:var(--text)}
-.hero-portrait figcaption span:last-child{font-size:9px;color:var(--muted)}
-@media(max-width:900px){.hero-portrait{justify-self:start;max-width:420px}.hero-portrait img{height:400px}}
-@media(max-width:600px){.hero-portrait{max-width:100%}.hero-portrait img{height:360px}}
+/* Compact profile photograph alongside the introduction. */
+.hero-intro{display:flex;align-items:center;gap:18px;margin-bottom:24px}
+.hero-intro .intro{margin:0;max-width:300px}
+.profile-avatar{width:88px;height:88px;flex-shrink:0;object-fit:cover;object-position:62% 43%;border-radius:50%;border:1px solid var(--line)}
+@media(max-width:600px){.hero-intro{gap:14px;margin-bottom:22px}.profile-avatar{width:72px;height:72px}.hero-intro .intro{max-width:220px}}
