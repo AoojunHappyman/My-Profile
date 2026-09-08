@@ -3,15 +3,16 @@
 @media(max-width:600px){.wrap{width:calc(100% - 36px)}.hero{padding-top:26px}.hero-grid{padding:38px 0}.hero-grid h1{font-size:clamp(39px,10.5vw,60px)}.intro{font-size:13px}.hero-description{font-size:14px}.availability{font-size:10px}.hero-top{gap:15px}.code-body{font-size:11px}.hero-bottom{font-size:8px}.hero-bottom>a{display:none}.section{padding-top:62px}.section-heading{display:block}.section-heading>p{margin-top:20px}.desktop{display:none}.project{grid-template-columns:1fr}.project-visual{min-height:300px}.project-content{padding:25px 21px}.about-grid{grid-template-columns:1fr;gap:12px}.skills-grid{gap:0}.skill-group+.skill-group{padding-left:15px}.skill-group:nth-child(3){padding-left:0}.skill-group h3{font-size:15px}.tags li{font-size:10px;padding:4px 8px}.timeline-row{grid-template-columns:1fr;gap:10px;padding:24px 0}.contact-section{margin-top:62px;padding:50px 0}.form-row{grid-template-columns:1fr;gap:0}.footer{flex-wrap:wrap}.footer p{font-size:10px}.footer>a:last-child{margin-left:auto}.actions{gap:8px}.button{padding:11px 14px;gap:17px}.about-facts{gap:30px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 .project-symbol{white-space:nowrap}@media(max-width:600px){.project-symbol{font-size:80px;padding:25px 10px}}
-/* Editorial portrait with restrained technical accents. */
-.about-portrait{position:relative;margin:32px 0 0;width:min(100%,330px);padding:0 12px 12px 0}
-.about-portrait::before{content:"";position:absolute;inset:12px 0 0 12px;border:1px solid var(--accent);border-radius:8px;opacity:.45;pointer-events:none}
-.portrait-frame{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:8px 8px 0 0;background:var(--surface)}
-.portrait-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 65%,#11151299);pointer-events:none}
-.portrait-frame img{display:block;width:100%;height:320px;object-fit:cover;object-position:55% 48%;transition:transform .45s ease,filter .45s ease;filter:saturate(.8)}
-.portrait-marker{position:absolute;top:14px;left:14px;padding:5px 9px;background:#111512e8;border:1px solid #d7f78b66;color:#d7f78b;font:10px/1.5 Consolas,monospace;letter-spacing:1.5px;z-index:1}
-.about-portrait figcaption{position:relative;display:flex;flex-direction:column;gap:3px;background:var(--surface);border:1px solid var(--line);border-top:0;border-radius:0 0 8px 8px;padding:14px 17px}
+/* Portrait proportions follow the original photograph. */
+.about-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}
+.about-portrait{position:relative;margin:28px 0 0;width:min(100%,280px);padding:0 9px 9px 0}
+.about-portrait::before{content:"";position:absolute;inset:9px 0 0 9px;border:1px solid var(--accent);border-radius:12px;opacity:.35;pointer-events:none}
+.portrait-frame{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:12px 12px 0 0;background:var(--surface)}
+.portrait-frame::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px #ffffff08;pointer-events:none}
+.portrait-frame img{display:block;width:100%;height:auto;aspect-ratio:1108/1477;object-fit:contain;transition:filter .3s ease;filter:saturate(.88)}
+.portrait-marker{position:absolute;top:12px;left:12px;padding:5px 9px;background:#111512e8;border:1px solid #d7f78b66;border-radius:4px;color:#d7f78b;font:10px/1.5 Consolas,monospace;letter-spacing:1.5px}
+.about-portrait figcaption{position:relative;display:flex;flex-direction:column;gap:4px;background:var(--surface);border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;padding:13px 15px}
 .about-portrait figcaption span:first-child{font-size:12px;color:var(--text)}
 .about-portrait figcaption span:last-child{font:10px/1.6 Consolas,monospace;color:var(--muted);letter-spacing:.6px}
-@media(hover:hover){.about-portrait:hover img{transform:scale(1.035);filter:saturate(1)}}
-@media(max-width:600px){.about-portrait{margin:24px 0 22px;width:min(100%,310px)}.portrait-frame img{height:290px}}
+@media(hover:hover){.about-portrait:hover img{filter:saturate(1)}}
+@media(max-width:600px){.about-grid{grid-template-columns:1fr}.about-portrait{margin:24px auto 20px;width:min(100%,260px)}}
