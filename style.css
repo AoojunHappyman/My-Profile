@@ -18,3 +18,7 @@
 @media(max-width:600px){.about-grid{grid-template-columns:1fr}.about-portrait{margin:24px auto 20px;width:min(100%,260px)}}
 
 .project+.project{margin-top:28px}
+
+.road-symbol{color:var(--accent);width:180px;height:180px;margin:25px 0;display:grid;place-items:center}
+.road-symbol svg{display:block;width:150px;height:150px}
+@media(max-width:600px){.road-symbol{width:150px;height:150px;margin:15px 0}.road-symbol svg{width:125px;height:125px}}
