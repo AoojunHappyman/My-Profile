@@ -16,3 +16,8 @@
 .about-portrait figcaption span:last-child{font:10px/1.6 Consolas,monospace;color:var(--muted);letter-spacing:.6px}
 @media(hover:hover){.about-portrait:hover img{filter:saturate(1)}}
 @media(max-width:600px){.about-grid{grid-template-columns:1fr}.about-portrait{margin:24px auto 20px;width:min(100%,260px)}}
+
+.project+.project{margin-top:28px}
+.bkk-project-visual{min-width:0;display:flex;flex-direction:column;justify-content:center;padding:24px;background:var(--surface);gap:20px}
+.bkk-project-visual img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:6px;box-shadow:0 14px 35px #0002}
+.bkk-project-visual>span{font:10px/1.6 Consolas,monospace;letter-spacing:1.5px;color:var(--muted)}
