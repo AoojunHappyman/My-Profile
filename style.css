@@ -25,3 +25,16 @@
 @media(max-width:600px){.road-symbol{width:230px;height:150px;margin:15px 0;gap:8px}.road-bracket{font-size:80px}.road-symbol svg{width:125px;height:125px}}
 
 @media(max-width:900px){.skill-group:nth-child(odd){border-left:0;padding-left:0}.skill-group:last-child{grid-column:1 / -1}}
+
+/* Real application screenshots framed as browser windows. */
+.project-browser-visual{min-width:0;display:flex;align-items:center;padding:26px;background:var(--surface);background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px}
+.browser-preview{width:100%;min-width:0;margin:0;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--bg);box-shadow:0 18px 40px #0003}
+.browser-toolbar{height:38px;display:flex;align-items:center;gap:12px;padding:0 12px;border-bottom:1px solid var(--line);background:var(--surface)}
+.browser-dots{display:flex;gap:4px;flex-shrink:0}.browser-dots i{width:6px;height:6px;border-radius:50%;background:var(--muted);opacity:.65}
+.browser-address{flex:1;min-width:0;text-align:center;font:10px/1.5 Consolas,monospace;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.browser-menu{font-size:14px;color:var(--muted)}
+.browser-screen{display:block;overflow:hidden}.browser-screen img{display:block;width:100%;height:auto;transition:filter .2s ease}.browser-screen:hover img{filter:brightness(1.12)}
+.browser-screen:focus-visible{outline-offset:-3px}
+.browser-preview figcaption{display:flex;justify-content:space-between;gap:12px;padding:12px;font:9px/1.5 Consolas,monospace;letter-spacing:.7px;color:var(--muted);border-top:1px solid var(--line)}
+.browser-preview figcaption a{color:var(--accent)}
+@media(max-width:600px){.project-browser-visual{padding:18px}.browser-toolbar{gap:8px}.browser-preview figcaption{font-size:8px;letter-spacing:0}}
