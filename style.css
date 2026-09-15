@@ -79,3 +79,8 @@
 .education-journey .education-gpa{color:var(--accent);font-family:Consolas,monospace;font-size:12px;margin-top:7px}
 @media(max-width:900px){.education-journey .timeline-row::before{left:151px}.education-journey .timeline-row::after{left:148px}}
 @media(max-width:600px){.education-journey .timeline-row{padding-left:24px}.education-journey .timeline-row::before{left:3px}.education-journey .timeline-row::after{left:0;top:31px}.education-journey .timeline-row:first-child::before{top:34px}.education-journey .timeline-row:last-child::before{bottom:calc(100% - 34px)}}
+
+/* Subtle interaction for technical toolkit tags. */
+#skills .tags li{transition:transform .2s ease,border-color .2s ease,color .2s ease,box-shadow .2s ease}
+@media(hover:hover) and (pointer:fine){#skills .tags li:hover{transform:translateY(-3px);border-color:var(--accent);color:var(--accent);box-shadow:0 3px 12px color-mix(in srgb,var(--accent) 14%,transparent)}}
+@media(prefers-reduced-motion:reduce){#skills .tags li{transition:none}#skills .tags li:hover{transform:none}}
