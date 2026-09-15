@@ -84,3 +84,9 @@
 #skills .tags li{transition:transform .2s ease,border-color .2s ease,color .2s ease,box-shadow .2s ease}
 @media(hover:hover) and (pointer:fine){#skills .tags li:hover{transform:translateY(-3px);border-color:var(--accent);color:var(--accent);box-shadow:0 3px 12px color-mix(in srgb,var(--accent) 14%,transparent)}}
 @media(prefers-reduced-motion:reduce){#skills .tags li{transition:none}#skills .tags li:hover{transform:none}}
+
+/* Contact links keep readable labels alongside lightweight inline icons. */
+#contact .email-link,#contact .socials a{display:inline-flex;align-items:center;gap:10px}
+.contact-icon{width:18px;height:18px;flex:0 0 18px;color:var(--accent)}
+#contact .email-link{max-width:100%}#contact .email-link span{min-width:0;overflow-wrap:anywhere}
+#contact .socials a{min-height:40px;padding:6px 0}
