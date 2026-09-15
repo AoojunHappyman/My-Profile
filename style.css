@@ -69,3 +69,13 @@
 .carousel-dot[aria-current="true"]::after{width:22px;border-radius:4px;background:var(--accent);border-color:var(--accent)}
 @media(hover:hover){.project-track{cursor:grab}.project-track a,.project-track button,.project-track summary{cursor:pointer}.project-track.is-dragging{cursor:grabbing}}
 @media(max-width:600px){.carousel-controls:not([hidden]){gap:8px;padding-top:18px}.carousel-controls .button{padding:10px 12px;font-size:11px}}
+
+/* A quiet timeline connects the education entries in the date/content gutter. */
+.education-journey .timeline-row{position:relative}
+.education-journey .timeline-row::before{content:"";position:absolute;left:201px;top:0;bottom:0;width:1px;background:var(--line)}
+.education-journey .timeline-row:first-child::before{top:39px}
+.education-journey .timeline-row:last-child::before{bottom:calc(100% - 39px)}
+.education-journey .timeline-row::after{content:"";position:absolute;left:198px;top:36px;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--bg)}
+.education-journey .education-gpa{color:var(--accent);font-family:Consolas,monospace;font-size:12px;margin-top:7px}
+@media(max-width:900px){.education-journey .timeline-row::before{left:151px}.education-journey .timeline-row::after{left:148px}}
+@media(max-width:600px){.education-journey .timeline-row{padding-left:24px}.education-journey .timeline-row::before{left:3px}.education-journey .timeline-row::after{left:0;top:31px}.education-journey .timeline-row:first-child::before{top:34px}.education-journey .timeline-row:last-child::before{bottom:calc(100% - 34px)}}
