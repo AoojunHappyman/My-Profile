@@ -90,3 +90,5 @@
 .contact-icon{width:18px;height:18px;flex:0 0 18px;color:var(--accent)}
 #contact .email-link{max-width:100%}#contact .email-link span{min-width:0;overflow-wrap:anywhere}
 #contact .socials a{min-height:40px;padding:6px 0}
+
+.section-label-th{display:block;margin-top:6px;font-family:Arial,Tahoma,sans-serif;font-size:10px;line-height:1.7;letter-spacing:0;font-weight:400;color:var(--muted)}
