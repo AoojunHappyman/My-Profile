@@ -54,7 +54,10 @@ if (carousel) {
   let animation = 0;
   let dragging = null;
   let suppressClick = false;
-  const position = index => slides[index].offsetLeft - slides[0].offsetLeft;
+  const position = index => Math.min(slides[index].offsetLeft - slides[0].offsetLeft, track.scrollWidth - track.clientWidth);
+  const picker = carousel.querySelector('.project-picker');
+  const choices = [];
+  carousel.querySelector('.project-swipe-hint').textContent = `${slides.length} projects · Swipe or use the arrows to explore`;
   const dots = slides.map((slide, index) => {
     const title = slide.querySelector('h3').textContent;
     slide.setAttribute('role', 'group');
@@ -67,6 +70,14 @@ if (carousel) {
     dot.setAttribute('aria-controls', 'project-track');
     dot.addEventListener('click', () => goTo(index));
     dotsContainer.append(dot);
+    const choice = document.createElement('button');
+    choice.type = 'button';
+    choice.className = 'project-choice';
+    choice.textContent = `${String(index + 1).padStart(2, '0')} / ${title}`;
+    choice.setAttribute('aria-controls', 'project-track');
+    choice.addEventListener('click', () => goTo(index));
+    picker.append(choice);
+    choices.push(choice);
     return dot;
   });
   function update(index) {
@@ -78,6 +89,7 @@ if (carousel) {
       if (i !== index && slide.contains(document.activeElement)) track.focus({ preventScroll: true });
       slide.inert = i !== index;
       dots[i].setAttribute('aria-current', String(i === index));
+      choices[i].setAttribute('aria-current', String(i === index));
     });
   }
   function stopAnimation() {
@@ -161,5 +173,6 @@ if (carousel) {
   new ResizeObserver(() => goTo(current, true)).observe(track);
   reducedMotion.addEventListener('change', () => goTo(current, true));
   carousel.querySelector('.carousel-controls').hidden = slides.length < 2;
+  picker.hidden = false;
   update(0);
 }
