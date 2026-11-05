@@ -1,24 +1,17 @@
 # Pattanachai portfolio
 
-Dependency-free static website. Serve this directory with any static web server (for example `python -m http.server 8000`) and open index.html. Existing resume.html and contact.html addresses redirect to the appropriate portfolio location. No build step is required.
+Static HTML/CSS/JavaScript portfolio hosted on GitHub Pages. No build step or runtime dependencies. Serve the project with `python -m http.server 8000`.
 
-## Files
-- index.html: portfolio content and metadata
-- style.css: responsive layout, dark/light themes, reduced-motion styles
-- config.js: mobile menu, theme preference, email draft validation, print controls
-- cv.html: editable print-friendly resume
-- Pattanachai-Sawetbunchoed-Resume.pdf: verified one-page downloadable resume; regenerate from cv.html after resume edits
-- profile.jpg: current profile photograph supplied by the owner, displayed in About Me
+## Structure
+- `index.html`: portfolio content, projects, skills, biography, experience, education and contact.
+- `style.css`: base layout and functional component styles.
+- `neo.css`: editorial neo-brutalist tokens, composition, themes and responsive styles.
+- `config.js`: mobile navigation, active section tracking, themes, image lightbox, email draft validation and print controls.
+- `cv.html`: print-friendly resume source; PDF is linked from the navigation and Hero.
+- `resume.html` and `contact.html`: existing redirect entry points.
 
-## Content still needed
-GitHub profile: https://github.com/AoojunHappyman (provided by the owner). Expense Tracker demo: https://expense-tracker-sg.onrender.com/. Expense Tracker source: https://github.com/AoojunHappyman/Expense-Tracker. The LinkedIn URL is still needed. Visible pending labels deliberately replace generic homepages and localhost links. No graduation date, responsibilities, statistics, or additional experience were invented.
+Project presentation uses an asymmetric grid: the featured data project spans both columns, with secondary projects below. On mobile all projects stack in document order. All original project descriptions, skills and links are preserved. Images open in a keyboard-accessible dialog. The contact form prepares an email draft; it does not send or store messages.
 
-The contact form validates inputs and opens a mailto draft. It does not send messages or store submissions. A configured email client is required; the direct email link remains available.
+Fonts are served locally. The design uses Inter and IBM Plex Sans Thai with monospace metadata, shared dark/light tokens, hard shadows and reduced-motion support. There are no external animation or component libraries.
 
-
-## Verification
-Browser checks at widths 320, 390, 768, 1024 and 1440: no horizontal overflow. Checked mobile menu, Escape closure logic, project details, saved theme, whitespace validation, contact redirect, and JavaScript console. PDF rendered and visually checked. No external fonts, icon libraries, JavaScript packages, or analytics are loaded by the website.
-
-Before public release, supply the missing profile and project links. Add absolute Open Graph image and canonical URLs when the final hosting address is known. Published at https://aoojunhappyman.github.io/My-Profile/ through GitHub Pages (main branch).
-
-
+GitHub Pages serves the repository root on main. All local asset links remain relative for compatibility with `/My-Profile/`.
