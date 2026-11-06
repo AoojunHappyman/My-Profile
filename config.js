@@ -26,7 +26,7 @@ if (contactForm) {
     if (!contactForm.reportValidity()) return;
     const [name, email, subject, message] = fields.map(field => field.value.trim());
     const body = `${message}\n\nFrom: ${name}\nEmail: ${email}`;
-    window.location.href = `mailto:pattanachai.saw@student.mahidol.ac.th?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:pattanachaisawet@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     document.querySelector('#form-status').textContent = 'Email draft requested. Please send it from your email app. If no app opens, use the email address above; your message remains here.';
   });
   contactForm.addEventListener('input', event => event.target.setCustomValidity(''));
