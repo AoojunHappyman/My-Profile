@@ -28,4 +28,4 @@ Personal Projects contains BKK Traffic Insight, Expense Tracker and EXMELLO. Tea
 
 `projects.js` initializes every `[data-project-carousel]` group with its own current slide, drag state, title picker and previous/next buttons. Inactive slides are inert for keyboard navigation. Resizing and reduced-motion changes retain each group's active project. Carousel styles are scoped to `.project-carousel` and shared by both categories.
 
-Team Projects also includes Starbucks Database Management System as the second article, an ITDS221 database-design project. Its description and concept badges follow the repository README: ER/EER modelling, relational mapping, 3NF and data dictionary. The supplied ER diagram is the local preview; no individual role or database engine has been inferred.
+Team Projects also includes STARBUCKS DB SYSTEM as the second article, an ITDS221 database-design project. Its description and concept badges follow the repository README: ER/EER modelling, relational mapping, 3NF and data dictionary. The supplied ER diagram is the local preview; no individual role or database engine has been inferred.
