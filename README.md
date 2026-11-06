@@ -22,3 +22,6 @@ GitHub Pages serves the repository root on main. All local asset links remain re
 Use `--accent` for theme-aware foreground text, and the paired `--highlight` / `--on-highlight` for filled highlights and buttons. Light mode uses dark green with white text. Contact intentionally keeps a lime surface in both modes, with scoped local tokens for the form, links and focus states. Derived border/shadow tokens are redeclared where the theme changes to avoid inherited resolved colors.
 
 Responsive and visual QA: reviewed dark/light Hero, project previews and Contact at 375, 768, 1440 and 1920px. The contrast checks cover the selected text/control pairs, not a complete accessibility audit. Browser screenshots and the detailed QA report are local, ignored artifacts under `qa/`.
+
+## Project categories
+Personal Projects contains BKK Traffic Insight, Expense Tracker and EXMELLO. Team Projects contains CondoFlow, an interactive frontend prototype for ITDS262 Software Engineering Lab. CondoFlow descriptions, technologies and the documented Frontend Engineer & UI Architect role are based on its public repository README and package manifest. The supplied dashboard screenshot is stored locally. Both groups remain visible, with direct category links.
