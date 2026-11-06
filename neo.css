@@ -110,7 +110,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .section-label-th { margin-top: 8px; }
 
 /* Project category headings and contribution details. */
-.project-group + .project-group { margin-top: var(--space-section); }
+.project-group + .project-group { margin-top: clamp(32px, 3vw, 48px); }
 .project-group-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 24px; }
 .project-group-heading h3 { font-size: clamp(24px, 3vw, 36px); margin: 0; }
 .project-group-heading p { font: 11px/1.6 Consolas, monospace; margin: 0; }
