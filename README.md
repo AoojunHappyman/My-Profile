@@ -10,7 +10,7 @@ Static HTML/CSS/JavaScript portfolio hosted on GitHub Pages. No build step or ru
 - `cv.html`: print-friendly resume source; PDF is linked from the navigation and Hero.
 - `resume.html` and `contact.html`: existing redirect entry points.
 
-Project presentation uses full-width editorial rows with alternating image/details columns. Desktop images stay below the sticky header; tablet, mobile and short laptop viewports use normal document flow. On mobile all projects stack in document order. All original project descriptions, skills and links are preserved. Images open in a keyboard-accessible dialog. The contact form prepares an email draft; it does not send or store messages.
+Personal projects progressively enhance into a horizontal scroll-snap showcase with a preview of the next project, title picker, previous/next controls and a live position counter. Mouse drag, native touch swipe and arrow keys are supported without autoplay. Controls derive from the actual project articles. With JavaScript disabled, personal projects remain readable editorial rows. Team projects retain the full-width editorial layout and sticky desktop preview. On mobile all projects stack in document order. All original project descriptions, skills and links are preserved. Images open in a keyboard-accessible dialog. The contact form prepares an email draft; it does not send or store messages.
 
 Fonts are served locally. The design uses Inter and IBM Plex Sans Thai with monospace metadata, shared dark/light tokens, hard shadows and reduced-motion support. There are no external animation or component libraries.
 
@@ -25,3 +25,5 @@ Responsive and visual QA: reviewed dark/light Hero, project previews and Contact
 
 ## Project categories
 Personal Projects contains BKK Traffic Insight, Expense Tracker and EXMELLO. Team Projects contains CondoFlow, an interactive frontend prototype for ITDS262 Software Engineering Lab. CondoFlow descriptions, technologies and the documented Frontend Engineer & UI Architect role are based on its public repository README and package manifest. The supplied dashboard screenshot is stored locally. Both groups remain visible, with direct category links.
+
+`projects.js` enhances only `#personal-projects`; inactive slides are inert for keyboard navigation. Resizing and reduced-motion changes retain the active project. Carousel styles are scoped to `.personal-carousel`; team project styles and content are unaffected.
