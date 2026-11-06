@@ -1,14 +1,14 @@
 'use strict';
 
-// Enhance only the personal group; team projects remain in normal document flow.
-const personalGroup = document.querySelector('#personal-projects');
-if (personalGroup) {
-  const track = personalGroup.querySelector('.project-grid');
+// Initialize independent carousels from the articles in each category.
+document.querySelectorAll('[data-project-carousel]').forEach(group => {
+  const track = group.querySelector('.project-grid');
   const slides = [...track.querySelectorAll(':scope > .project')];
-  const picker = personalGroup.querySelector('.personal-project-picker');
-  const previous = personalGroup.querySelector('.personal-prev');
-  const next = personalGroup.querySelector('.personal-next');
-  const counter = personalGroup.querySelector('.personal-project-counter');
+  if (!slides.length) return;
+  const picker = group.querySelector('.project-picker');
+  const previous = group.querySelector('.project-prev');
+  const next = group.querySelector('.project-next');
+  const counter = group.querySelector('.project-carousel-counter');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   let current = 0;
   let animation = 0;
@@ -68,7 +68,7 @@ if (personalGroup) {
   }
   previous.addEventListener('click', () => goTo(current - 1));
   next.addEventListener('click', () => goTo(current + 1));
-  personalGroup.addEventListener('keydown', event => {
+  group.addEventListener('keydown', event => {
     if (event.altKey || event.ctrlKey || event.metaKey || event.target.closest('input, textarea, select')) return;
     if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
       event.preventDefault();
@@ -119,14 +119,15 @@ if (personalGroup) {
   track.addEventListener('click', event => {
     if (suppressClick) { event.preventDefault(); event.stopPropagation(); }
   }, true);
-  personalGroup.classList.add('personal-carousel');
-  personalGroup.setAttribute('aria-roledescription', 'carousel');
+  group.classList.add('project-carousel');
+  group.setAttribute('aria-roledescription', 'carousel');
   track.tabIndex = 0;
-  track.setAttribute('aria-label', 'Personal projects. Use left and right arrow keys to navigate.');
-  picker.hidden = slides.length < 2;
-  personalGroup.querySelector('.personal-project-controls').hidden = slides.length < 2;
-  personalGroup.querySelector('.personal-project-hint').hidden = slides.length < 2;
+  track.setAttribute('aria-label', `${group.querySelector('.project-group-heading h3').textContent}. Use left and right arrow keys to navigate.`);
+  group.dataset.projectCount = String(slides.length);
+  picker.hidden = false;
+  group.querySelector('.project-carousel-controls').hidden = false;
+  group.querySelector('.project-swipe-hint').hidden = slides.length < 2;
   new ResizeObserver(() => goTo(current, true)).observe(track);
   reducedMotion.addEventListener('change', () => goTo(current, true));
   update(0);
-}
+});
