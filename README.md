@@ -24,8 +24,10 @@ Use `--accent` for theme-aware foreground text, and the paired `--highlight` / `
 Responsive and visual QA: reviewed dark/light Hero, project previews and Contact at 375, 768, 1440 and 1920px. The contrast checks cover the selected text/control pairs, not a complete accessibility audit. Browser screenshots and the detailed QA report are local, ignored artifacts under `qa/`.
 
 ## Project categories
-Personal Projects contains BKK Traffic Insight, Expense Tracker and EXMELLO. Team Projects contains CondoFlow, an interactive frontend prototype for ITDS262 Software Engineering Lab. CondoFlow descriptions, technologies and the documented Frontend Engineer & UI Architect role are based on its public repository README and package manifest. The supplied dashboard screenshot is stored locally. Both categories retain their headings and independent project controls.
+Personal Projects contains BKK Traffic Insight, Expense Tracker, EXMELLO and BKK Geospatial Intelligence. Team Projects contains CondoFlow, an interactive frontend prototype for ITDS262 Software Engineering Lab. CondoFlow descriptions, technologies and the documented Frontend Engineer & UI Architect role are based on its public repository README and package manifest. The supplied dashboard screenshot is stored locally. Both categories retain their headings and independent project controls.
 
 `projects.js` initializes every `[data-project-carousel]` group with its own current slide, drag state, title picker and previous/next buttons. Inactive slides are inert for keyboard navigation. Resizing and reduced-motion changes retain each group's active project. Carousel styles are scoped to `.project-carousel` and shared by both categories.
 
 Team Projects also includes STARBUCKS DB SYSTEM as the second article, an ITDS221 database-design project. Its description and concept badges follow the repository README: ER/EER modelling, relational mapping, 3NF and data dictionary. The supplied ER diagram is the local preview; no individual role or database engine has been inferred.
+
+BKK Geospatial Intelligence is the fourth personal project. Its preview is the owner-supplied district-explorer screenshot; its descriptions and technology badges follow the repository README and dependency manifests. The live link preserves the supplied metric and ranking parameters.
