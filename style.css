@@ -51,25 +51,6 @@
 @media(max-width:1100px){.data-trend{width:72px}.data-project-heading{gap:10px}}
 @media(max-width:600px){.data-project-heading .eyebrow{font-size:10px;letter-spacing:1.2px}.data-trend{width:65px}.project-links{gap:10px}}
 
-/* One full-width project per slide; touch scrolling remains native. */
-.project-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;align-items:flex-start;border-radius:8px;}
-.project-track::-webkit-scrollbar{display:none}
-.project-track>.project{flex:0 0 100%;min-width:0;scroll-snap-align:start;scroll-snap-stop:always;margin:0}
-.project-track:focus-visible{outline:2px solid var(--accent);outline-offset:6px}
-.project-track.is-moving{scroll-snap-type:none}
-.project-track.is-dragging{cursor:grabbing;user-select:none}
-.project-track img{-webkit-user-drag:none}
-.carousel-controls:not([hidden]){display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:25px}
-.carousel-controls .button:disabled{color:var(--muted);opacity:.45;cursor:default;transform:none;border-color:var(--line)}
-.carousel-position{display:flex;flex-direction:column;align-items:center;gap:9px}
-.carousel-counter{font:12px/1.5 Consolas,monospace;letter-spacing:2px;color:var(--muted)}
-.carousel-dots{display:flex;align-items:center;gap:7px}
-.carousel-dot{width:28px;height:24px;padding:0;border:0;background:transparent;display:grid;place-items:center}
-.carousel-dot::after{content:"";width:6px;height:6px;border-radius:50%;border:1px solid var(--muted);transition:width .3s ease,background .3s ease}
-.carousel-dot[aria-current="true"]::after{width:22px;border-radius:4px;background:var(--accent);border-color:var(--accent)}
-@media(hover:hover){.project-track{cursor:grab}.project-track a,.project-track button,.project-track summary{cursor:pointer}.project-track.is-dragging{cursor:grabbing}}
-@media(max-width:600px){.carousel-controls:not([hidden]){gap:8px;padding-top:18px}.carousel-controls .button{padding:10px 12px;font-size:11px}}
-
 /* A quiet timeline connects the education entries in the date/content gutter. */
 .education-journey .timeline-row{position:relative}
 .education-journey .timeline-row::before{content:"";position:absolute;left:201px;top:0;bottom:0;width:1px;background:var(--line)}
@@ -97,16 +78,10 @@
 #skills .tags li{max-width:100%;overflow-wrap:anywhere}
 
 @font-face{font-family:Inter;src:url('fonts/inter.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
-.project-track>.project{flex-basis:94%}
-.project-track::after{content:"";flex:0 0 max(0px,calc(6% - 24px))}
-.project-picker:not([hidden]){display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
-.project-choice{padding:10px 14px;border:1px solid var(--line);border-radius:5px;color:var(--muted);background:transparent;font:11px/1.5 Consolas,monospace}
-.project-choice[aria-current="true"]{color:var(--accent);border-color:var(--accent);background:var(--surface)}
-.project-swipe-hint{font-size:11px;margin:0 0 18px;color:var(--muted)}
 .project-highlights{margin:24px 0 0}.project-highlights h4{font:10px/1.5 Consolas,monospace;letter-spacing:1.5px;color:var(--accent);margin:0 0 10px}
 .project-highlights ul{padding-left:18px;margin:0;color:var(--muted);font-size:13px;line-height:1.7}.project-highlights li+li{margin-top:6px}.project-highlights li::marker{color:var(--accent)}
 .project-content .demo-note{font-size:11px;line-height:1.6;margin:12px 0 0}
-@media(max-width:600px){.project-track{gap:12px}.project-track>.project{flex-basis:92%}.project-track::after{flex-basis:max(0px,calc(8% - 12px))}.project-choice{font-size:10px;padding:9px 10px}.project-content{padding:24px 18px}}
+
 
 .nav-links a[aria-current="location"]{color:var(--accent);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:7px}
 .preview-lightbox{width:min(1400px,calc(100% - 40px));max-width:none;max-height:calc(100dvh - 40px);padding:0;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--text);overflow:auto}
